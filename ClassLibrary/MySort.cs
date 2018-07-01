@@ -10,25 +10,22 @@ namespace ClassLibrary
     {
         public int[] InsertionSort(int[] intArray)
         {
-            int temp, j;
+            int temp, t;
 
-            for (int i = 1; i < intArray.Length; i++)
+            for (int n = 1; n < intArray.Length; n++)
             {
                 temp = intArray[i];
 
-                j = i - 1;
+                t = n - 1;
 
-                while (j >= 0 && intArray[j] > temp)
+                while (t >= 0 && intArray[t] > temp)
 
                 {
-                    intArray[j + 1] = intArray[j];
-                    j--;
+                    intArray[t + 1] = intArray[t];
+                    t--;
                 }
-                intArray[j + 1] = temp;
+                intArray[t + 1] = temp;
             }
-
-            //string[] sorted = intArray.Select(x => x.ToString()).ToArray();
-
             return intArray;
         }
 
@@ -56,9 +53,6 @@ namespace ClassLibrary
 
                 gap = gap / 2;
             }
-
-            //string[] sorted = data.Select(x => x.ToString()).ToArray();
-
             return data;
         }
     }
